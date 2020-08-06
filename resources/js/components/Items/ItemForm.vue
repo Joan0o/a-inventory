@@ -43,6 +43,7 @@
         <b-form-radio-group id="radio-group-1" v-model="form.status" name="radio-sub-component">
           <b-form-radio name="radios" value="active">Activo</b-form-radio>
           <b-form-radio name="radios" value="inactive">Inactivo</b-form-radio>
+          <b-form-radio name="radios" value="pending">Pendiente</b-form-radio>
         </b-form-radio-group>
       </b-form-group>
 

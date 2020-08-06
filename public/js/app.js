@@ -1762,6 +1762,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1944,7 +1945,7 @@ var fields = [{
       rawItems: null,
       filter: "",
       _show_all: true,
-      selected: [""],
+      selected: ["active", "inactive", "pending"],
       infoModal: {
         id: "info-modal",
         title: "",
@@ -64552,6 +64553,12 @@ var render = function() {
                         "b-form-radio",
                         { attrs: { name: "radios", value: "inactive" } },
                         [_vm._v("Inactivo")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-form-radio",
+                        { attrs: { name: "radios", value: "pending" } },
+                        [_vm._v("Pendiente")]
                       )
                     ],
                     1
@@ -64734,6 +64741,7 @@ var render = function() {
                     _c(
                       "b-form-checkbox",
                       {
+                        attrs: { selected: "" },
                         model: {
                           value: _vm.show_all,
                           callback: function($$v) {

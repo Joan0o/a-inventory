@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Item;
 use App\Http\Resources\Item as ItemResource;
+use Illuminate\Support\Facades\DB;
+
 
 class ItemController extends Controller
 {
@@ -15,7 +17,11 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return ItemResource::collection(Item::all());
+        $items = DB::table('items')
+            ->join('warehouse', 'items.warehouse', '=', 'warehouse.id')
+            ->select('items.*', 'warehouse.name as warehouse')
+            ->get();
+            return ['data' => $items];
     }
 
     /**

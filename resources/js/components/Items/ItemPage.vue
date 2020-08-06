@@ -26,7 +26,7 @@
 
           <div>
             <b-form-group label-cols-sm="3" label-align-sm="right" label-size="sm" class="mb-0">
-              <b-form-checkbox v-model="show_all">Mostrar todos</b-form-checkbox>
+                <b-form-checkbox selected v-model="show_all">Mostrar todos</b-form-checkbox>
               <b-form-checkbox-group v-model="selected" class="mt-1">
                 <b-form-checkbox value="active">Activos</b-form-checkbox>
                 <b-form-checkbox value="inactive">Inactivos</b-form-checkbox>
@@ -107,7 +107,7 @@ export default {
       rawItems: null,
       filter: "",
       _show_all: true,
-      selected: [""],
+      selected: ["active", "inactive", "pending"],
       infoModal: {
         id: "info-modal",
         title: "",
