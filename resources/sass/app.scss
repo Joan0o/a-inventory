@@ -1,0 +1,70 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap";
+@import "~bootstrap-vue/src/index";
+
+body {
+  background-color: $body-bg !important;
+}
+
+.main {
+  padding: 3rem;
+}
+
+.top {
+  margin-bottom: 0.3rem;
+}
+
+h1 {
+  font: bold;
+}
+
+.form-inline *{
+  margin: 0 .2rem 0 .2rem;
+}
+
+thead th {
+  background-color: #017AAF;
+  color: white;
+}
+thead th:first-child {
+  border-radius: .8rem 0 0 0;
+}
+thead th:last-child {
+  border-radius: 0 .8rem 0 0;
+}
+
+/* remove border from th... */
+/* !important is only required in stack snippet, probably not in your production code */
+
+.table > thead > tr > th {
+  border: none !important;
+}
+
+/* remove border from first tbody row... */
+.table > tbody > tr:first-child > td,
+.table > tbody > tr:first-child > th {
+  border-top: none;
+}
+
+.create-button {
+  background-color: #06c4bdd1;
+  width: 163;
+  height: 42px;
+  color: white;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  outline: none;
+}
+
+.create-button:hover {
+  background-color: #2ee59d;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+}
